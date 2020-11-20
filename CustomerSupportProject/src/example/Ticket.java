@@ -1,6 +1,9 @@
 package example;
 
 import java.util.Map;
+
+
+import java.util.Collection;
 import java.util.LinkedHashMap;
 public class Ticket {
 	
@@ -34,8 +37,8 @@ public class Ticket {
 		Body = body;
 	}
 
-	public Map<String, Attachment> getAttachments() {
-		return attachments;
+	public Collection <Attachment> getAttachments() {
+		return this.attachments.values();
 	}
 
 	public void setAttachments(Map<String, Attachment> attachments) {
@@ -46,6 +49,15 @@ public class Ticket {
 	{
 		this.attachments.put(attachment.getName(), attachment);
 	}
-
+	
+	public int getNumberOfAttachment()
+	{
+		return this.attachments.size();
+	}
+	
+	 public Attachment getAttachment(String name)
+	    {
+	        return this.attachments.get(name);
+	    }
 	
 }
