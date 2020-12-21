@@ -7,6 +7,7 @@
 <title>Customer Support Project</title>
 </head>
 <body>
+<h1>My First Servlet Project</h1>
 <a href="tickets">Go to tickets</a>
 </body>
 </html>
